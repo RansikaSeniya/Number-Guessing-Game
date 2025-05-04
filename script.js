@@ -7,6 +7,7 @@ let guessCount = 0;
 
 const guessingNumber = document.getElementById('guessingNumber');
 const guessingForm = document.getElementById('guessingForm');
+const newGameBtn = document.getElementById('newGameBtn');
 const hint = document.getElementById('hint');
 const attemptsElement = document.getElementById('attempts');
 const history = document.getElementById('history');
@@ -20,6 +21,9 @@ guessingForm.addEventListener('submit', function (event) {
     guessingNumber.value = '';
 });
 
+newGameBtn.addEventListener('click', function () {
+   location.reload();
+});
 function checkGuess(guess){
     guessCount++;
     guessHistory.push(guess);
